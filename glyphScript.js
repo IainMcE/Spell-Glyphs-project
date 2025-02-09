@@ -258,7 +258,7 @@ function conditionToValue(){
 		let result = new Array(numDots).fill(0);
 		let conditionSelected = document.querySelectorAll("#conditionMultiple input[type='checkbox']:checked")
 		conditionSelected.forEach(node=>{
-			result[areasOfEffects.indexOf(node.id)] = 1
+			result[conditions.indexOf(node.id)] = 1
 		})
 		return result.join("")
 	}else{
