@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="setUp()">
+	<div id="container">
+	<div id="inputs">
+		<!-- level, school, range, duration, damage type, area -->
+		<!-- missing info: cast time, inflicted conditions, healing/damage protection -->
+		<div>
+			<input id="rotationToggle" type="checkbox" style="display:none;">
+			<label for="rotationToggle">
+				<div id="rotFree" class="">Free Rotation</div>
+				<div id="rotLocked" class="disabledText">Multiples Allowed</div>
+			</label>
+		</div>
+
+		<div>
+			<label for="spellLevel">Spell Level</label>
+			<select id="spellLevel"></select>
+		</div>
+		<input type="range" id="levelSlider">
+
+		<div>
+			<label for="spellSchool">School of Magic</label>
+			<select id="spellSchool"></select>
+		</div>
+		<input type="range" id="schoolSlider">
+
+		<div>
+			<label for="range">Range</label>
+			<select id="range"></select>
+		</div>
+		<input type="range" id="rangeSlider">
+
+		<div>
+			<label for="duration">Duration</label>
+			<select id="duration"></select>
+		</div>
+		<input type="range" id="durationSlider">
+
+		<div>
+			Areas of Effect
+			<div id="aoeMultiple" style="display:none"></div>
+			<select id="aoeSingle"></select>
+		</div>
+		<input type="range" id="aoeSlider">
+
+		<div>
+			Damages
+			<div id="damageMultiple" style="display:none"></div>
+			<select id="damageSingle"></select>
+		</div>
+		<input type="range" id="damagesSlider">
+
+		<div>
+			Conditions
+			<div id="conditionMultiple" style="display:none"></div>
+			<select id="conditionSingle"></select>
+		</div>
+		<input type="range" id="conditionSlider">
+	</div>
+	<div id="outputs">
+		<svg id="glyph-lines" height=100 width=100></svg>
+		<svg id="glyph-dots" height=100 width=100></svg>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.disabledText{
+	color:darkgrey;
+}
+.disabledDiv{
+	display:none;
+}
+.disabledSlider{
+	pointer-events: none;
+}
+.disabledSlider::-webkit-slider-thumb, .disabledSlider::-moz-range-thumb{
+	background-color: grey;
+}
+
+#container{
+	display:flex;
+}
+
+#inputs, #outputs{
+	width: 40%;
+	height: 96%;
+	padding: 2% 5%;
+	overflow-y:auto;
+	max-height:90vh;
+}
+
+#inputs>div{
+	display:flex;
+	justify-content: space-between;
+	padding-top: 2vh;
+}
+#inputs select, #inputs>div>div{
+	width:50%;
+}
+
+input[type="range"]{
+	width:100%;
+}
+
+label[for='rotationToggle']{
+	display: flex;
+}
+label[for='rotationToggle'] div{
+	padding: 0 1vw;
+}
+
+label[for='rotationToggle'], #damageMultiple label, #aoeMultiple label, input, select{
+	cursor:pointer;
+}
+
+#damageMultiple, #aoeMultiple{
+	display:flex;
+	flex-direction: column;
+    align-items: flex-start;
+}
+
+svg{
+	width: 40vw;
+	height: 40vw;
+	border: 1px black solid;
+	position:absolute;
+	top:2%;
+	right:5%;
+}
+circle{
+	cursor:pointer;
+}
+
+@media screen and (orientation: portrait) {
+	#container{
+		flex-direction: column-reverse;
+	}
+	#inputs, #outputs{
+		width: 80%;
+		height: 46vh;
+		padding: 2% 5%;
+		overflow-y:auto;
+	}
+	svg {
+		width: 44vh;
+		height: 44vh;
+		right: calc((100vw - 44vh) / 2);
+	}
+}
