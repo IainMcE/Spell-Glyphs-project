@@ -43,7 +43,7 @@ label[for='rotationToggle'] div{
 	padding: 0 1vw;
 }
 
-label[for='rotationToggle'], #damageMultiple label, #aoeMultiple label, input, select{
+label[for='rotationToggle'], #damageMultiple label, #aoeMultiple label, #conditionMultiple label, input, select{
 	cursor:pointer;
 }
 
