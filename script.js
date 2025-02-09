@@ -357,8 +357,8 @@ function drawLines(value, skip, offset, lineStorage){
 	for(let i = 0; i<toDraw.length; i++){
 		if(toDraw[i] == "1"){
 			let line = document.createElementNS(svgns, "line");
-			let start = (i+offset) % 13;
-			let end = (start+skip) % 13;
+			let start = (i+offset) % numDots;
+			let end = (start+skip) % numDots;
 			line.setAttributeNS(null, "x1", dotPositions[start].x);
 			line.setAttributeNS(null, "y1", dotPositions[start].y);
 			line.setAttributeNS(null, "x2", dotPositions[end].x);
